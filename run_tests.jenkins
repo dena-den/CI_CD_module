@@ -12,7 +12,7 @@ pipeline {
         steps{
           sh("chmod +x -R ${env.WORKSPACE}")
           sh("python3 -m pip install --user --upgrade pip")
-          sh("python3 -m pip install --user virtualenv)
+          sh("python3 -m pip install --user virtualenv")
           sh("python3 -m venv .venv")
           sh(".venv/Scripts/activate")
           sh("pip install pytest")
