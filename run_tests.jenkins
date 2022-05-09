@@ -10,8 +10,8 @@ pipeline {
       }
       stage('List') {
         steps{      
-          bat(".venv\Scripts\activate")
-          bat("pytest -v")
+          sh(".venv\Scripts\activate")
+          sh("pytest -v")
         }
 
 
