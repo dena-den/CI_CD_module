@@ -11,10 +11,8 @@ pipeline {
       }
       stage('List') {
         steps{
-          sh("pwd")
-          sh("ls -a")
-          sh("echo ${JENKINS_HOME}")
-          sh("${JENKINS_HOME}/workspace/test/.venv/Scripts/activate")
+          sh("./.venv/Scripts/activate")
+          sh("pip freeze")
           sh("pytest -v")
         }
 
