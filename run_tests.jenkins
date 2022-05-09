@@ -10,7 +10,7 @@ pipeline {
       }
       stage('List') {
         steps{      
-          bat("pytest -v")
+          sh("pytest -v")
         }
 
 
