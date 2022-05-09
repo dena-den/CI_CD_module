@@ -9,8 +9,10 @@ pipeline {
         }
       }
       stage('List') {
-        steps{      
-          sh(".venv/Scripts/activate")
+        steps{
+          sh("pwd")
+          sh("ls")
+          sh("${JENKINS_HOME}/.venv/Scripts/activate")
           sh("pytest -v")
         }
 
