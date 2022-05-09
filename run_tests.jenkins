@@ -1,6 +1,7 @@
 pipeline {
    agent any
 
+
    stages {
       stage('Build') {
         steps {
@@ -9,19 +10,11 @@ pipeline {
         }
       }
       stage('List') {
-        steps{
-          sh("chmod +x -R ${env.WORKSPACE}")
-          sh("python -m pip install --user --upgrade pip")
-          sh("python -m pip install --user virtualenv")
-          sh("python -m venv .venv")
-          sh(".venv/Scripts/activate")
-          sh("pip install pytest")
-          sh("pip install pyodbc")
-          sh("pip freeze")
-          sh("pytest -v")
+        steps{      
+          sh "ls ${JENKINS_HOME}"
         }
-      }
-
+        }
+   
    stage('Test') {
      steps {
         echo 'Testing...'
@@ -33,4 +26,4 @@ pipeline {
      }
    }
   }
-} 
+}
