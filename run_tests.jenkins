@@ -14,9 +14,9 @@ pipeline {
         }
         }
    
-   stage('Test') {
+   stage('Tests') {
      steps {
-        python test_TRN_db.py
+        pytest -v
      }
    }
    stage('Deploy') {
