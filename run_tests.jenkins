@@ -3,32 +3,26 @@ pipeline {
 
 
    stages {
-      stage('Path_changing') {
       stage('Adding_path') {
         steps {
           set PATH=C:\1PROGRAMS\Python\;%PATH%
         }
       }
-      stage('Environment_creating') {
       stage('Creating_environment') {
         steps{      
-          python first_test.py
           python -m venv .venv
           .venv\Scripts\activate
           pip install -r requirements.txt
         }
         }
 
-   stage('Tests') {
    stage('Runing_tests') {
      steps {
         pytest -v
      }
    }
-   stage('Deploy') {
    stage('Result') {
      steps {
-       echo 'Deploying...'
        echo 'Success!'
      }
    }
