@@ -16,7 +16,7 @@ pipeline {
    
    stage('Runing_tests') {
      steps {
-        bat("C:\4COURSES\DQE_Intermidiate\CI_CD\pytest\.venv\Scripts\pytest.exe -v")
+        bat("C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\pytest\\.venv\\Scripts\\pytest.exe -v")
      }
    }
    stage('Result') {
