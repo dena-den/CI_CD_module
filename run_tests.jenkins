@@ -5,13 +5,13 @@ pipeline {
    stages {
       stage('Adding_path') {
         steps {
-          set PATH=C:\1PROGRAMS\Python\;%PATH%
+          set PATH=C:/1PROGRAMS/Python/;%PATH%
         }
       }
       stage('Creating_environment') {
         steps{      
           python -m venv .venv
-          .venv\Scripts\activate
+          .venv/Scripts/activate
           pip install -r requirements.txt
         }
         }
