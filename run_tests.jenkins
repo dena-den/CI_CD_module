@@ -11,12 +11,13 @@ pipeline {
           bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv")
           bat(".venv\\Scripts\\activate")
           bat("C:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt")
+          bat(".venv\\Scripts\\pytest.exe -v")
         }
         }
 
    stage('Runing_tests') {
      steps {
-        bat(".venv\\Scripts\\pytest.exe -v")
+        echo 'Pass'
      }
    }
    stage('Result') {
