@@ -18,12 +18,12 @@ pipeline {
 
    stage('Runing_tests') {
      steps {
-        pytest -v
+        pytest -v > output.txt
      }
    }
    stage('Result') {
      steps {
-       echo 'Success!'
+       echo output.txt
      }
    }
   }
