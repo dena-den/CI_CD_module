@@ -5,7 +5,7 @@ pipeline {
    stages {
       stage('Adding_path') {
         steps {
-          bat("set PATH=C:\1PROGRAMS\Python\;%PATH%")
+          bat("set PATH=C:/1PROGRAMS/Python/;%PATH%")
         }
       }
       stage('Creating_environment') {
