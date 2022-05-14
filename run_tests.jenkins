@@ -23,7 +23,7 @@ pipeline {
    }
    stage('Result') {
      steps {
-       echo output.txt
+       cat output.txt
      }
    }
   }
