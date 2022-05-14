@@ -5,12 +5,12 @@ pipeline {
    stages {
       stage('Adding_path') {
         steps {
-          bat("set PATH=C:\\1PROGRAMS\\Python\\;%PATH%")
+          bat("set PATH=C:\\Users\\Denis_Bulychev\\AppData\\Local\\Microsoft\\WindowsApps\\;%PATH%")
         }
       }
       stage('Creating_environment') {
         steps{
-          bat(".venv\\Scripts\\activate")
+          bat("python first_test.py")
         }
         }
    
