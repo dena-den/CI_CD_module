@@ -3,23 +3,24 @@ pipeline {
    stages {
       stage('Adding_path') {
         steps {
-          echo 'Path'
+          bat("set PATH=C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\pytest\\.venv\\Scripts\\;%PATH%")
+          bat("C:\\1PROGRAMS\\Python\\python.exe -m pip freeze")
         }
       }
       stage('Creating_environment') {
         steps{
-          bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv\n.venv\\Scripts\\activate\nC:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt\npytest -v")
+          bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv \n .venv\\Scripts\\activate \n C:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt \n pytest -v")
         }
         }
 
    stage('Runing_tests') {
      steps {
-        echo 'Pass'
+        bat("C:\\1PROGRAMS\\Python\\python.exe -m pip freeze")
      }
    }
    stage('Result') {
       steps {
-        echo 'Success!'
+        bat("python first_test.py")
       }
    }
   }
