@@ -11,7 +11,7 @@ pipeline {
       stage('Creating_environment') {
         steps{
           bat(".venv\\Scripts\\activate")
-          bat("pytest -v")
+          bat(" C:\\1PROGRAMS\\Python\\python.exe pytest -v")
         }
         }
    
