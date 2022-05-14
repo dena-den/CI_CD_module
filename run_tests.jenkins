@@ -8,11 +8,7 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{
-          bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv")
-          bat(".venv\\Scripts\\activate")
-          bat("C:\\1PROGRAMS\\Python\\python.exe -m pip install pytest")
-          bat("C:\\1PROGRAMS\\Python\\python.exe -m pip install pyodbc")
-          bat("pytest -v")
+          bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv\n.venv\\Scripts\\activate\nC:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt\npytest -v")
         }
         }
 
