@@ -10,13 +10,15 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{
+          bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv")
+          bat(".venv\\Scripts\\activate")
           bat("C:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt")
         }
         }
    
    stage('Runing_tests') {
      steps {
-        bat("C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\pytest\\.venv\\Scripts\\pytest.exe -v")
+        bat("C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_pipeline\.venv\Scripts\\pytest.exe -v")
      }
    }
    stage('Result') {
