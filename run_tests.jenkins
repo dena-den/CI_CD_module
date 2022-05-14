@@ -11,18 +11,17 @@ pipeline {
       stage('Creating_environment') {
         steps{
           bat(".venv\\Scripts\\activate")
-          bat(" C:\\1PROGRAMS\\Python\\python.exe pytest -v")
         }
         }
    
    stage('Runing_tests') {
      steps {
-        bat("echo 'Success!'")
+        bat("pytest -v")
      }
    }
    stage('Result') {
       steps {
-        bat("echo 'Success!'")
+        echo 'Success!'
       }
    }
   }
