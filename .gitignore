@@ -1,6 +1,6 @@
 # Environments
 .env
-.venv
+#.venv
 env/
 venv/
 
@@ -8,3 +8,4 @@ venv/
 .vscode
 
 test.py
+tmp.txt
