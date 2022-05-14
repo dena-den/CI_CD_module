@@ -10,7 +10,7 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{
-          echo 'env'
+          bat("C:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt")
         }
         }
    
