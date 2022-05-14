@@ -3,19 +3,18 @@ pipeline {
    stages {
       stage('Adding_path') {
         steps {
-          bat("set PATH=C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\pytest\\.venv\\Scripts\\;%PATH%")
           bat("C:\\1PROGRAMS\\Python\\python.exe -m pip freeze")
         }
       }
       stage('Creating_environment') {
         steps{
-          bat(".venv\\Scripts\\activate \n C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\pytest\\.venv\\Scripts\\pytest.exe -v")
+          bat("C:\\1PROGRAMS\\Python\\python.exe -m pytest -v")
         }
         }
 
    stage('Runing_tests') {
      steps {
-        bat("C:\\1PROGRAMS\\Python\\python.exe -m pip freeze")
+       echo 'Run'
      }
    }
    stage('Result') {
