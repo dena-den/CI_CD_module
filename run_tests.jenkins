@@ -10,7 +10,7 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{
-          bat("python first_test.py")
+          bat("C:\\Users\\Denis_Bulychev\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe first_test.py")
         }
         }
    
