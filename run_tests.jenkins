@@ -10,21 +10,21 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{      
-          python -m venv .venv
-          .venv/Scripts/activate
-          pip install -r requirements.txt
+          bat("python -m venv .venv")
+          bat(".venv/Scripts/activate")
+          bat("pip install -r requirements.txt")
         }
         }
    
    stage('Runing_tests') {
      steps {
-        pytest -v
+        bat("pytest -v")
      }
    }
    stage('Result') {
-     steps {
-       echo 'Success!'
-     }
+      steps {
+        bat("echo 'Success!'")
+      }
    }
   }
 }
