@@ -10,7 +10,7 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{
-          bat("C:\\1PROGRAMS\\Python\\python.exe first_test.py")
+          echo 'env'
         }
         }
    
