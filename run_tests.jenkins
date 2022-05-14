@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Creating_environment') {
         steps{
-          bat("C:\\1PROGRAMS\\Python\\python.exe -m venv .venv \n .venv\\Scripts\\activate \n C:\\1PROGRAMS\\Python\\python.exe -m pip install -r requirements.txt \n pytest -v")
+          bat(".venv\\Scripts\\activate \n C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\pytest\\.venv\\Scripts\\pytest.exe -v")
         }
         }
 
@@ -20,7 +20,7 @@ pipeline {
    }
    stage('Result') {
       steps {
-        bat("python first_test.py")
+        bat("C:\\1PROGRAMS\\Python\\python.exe first_test.py")
       }
    }
   }
