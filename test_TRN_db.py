@@ -10,10 +10,10 @@ def database_connection(driver=r'{ODBC Driver 17 for SQL Server}',
                 database='TRN'
                 ) -> pyodbc.Cursor:
     """ TRN database connection. """
-    username = r'Denis_Bulychev_jenkins'
+    username = r'Jenkins'
     password = 'Belochka666'
-    parameters = r'DRIVER={SQL Server};SERVER=EPRUPETW0ECA\SQLEXPRESS;DATABASE=TRN;Trusted_Connection=yes;'# + \
-        #';UID=' + username + ';PWD=' + password
+    parameters = r'DRIVER={SQL Server};SERVER=EPRUPETW0ECA\SQLEXPRESS;DATABASE=TRN;Trusted_Connection=no;' + \
+        ';UID=' + username + ';PWD=' + password
     cnxn = pyodbc.connect(parameters)
     return cnxn.cursor()
 
