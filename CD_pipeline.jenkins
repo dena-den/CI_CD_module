@@ -1,9 +1,9 @@
 pipeline {
    agent any
    stages {
-      stage('Deploying') {
+      stage('Releasing') {
         steps{
-          bat("xcopy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
+          bat("xcopy /H /E C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
         }
       }
   }

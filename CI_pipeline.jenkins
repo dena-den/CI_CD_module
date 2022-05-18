@@ -1,12 +1,6 @@
 pipeline {
    agent any
    stages {
-     stage('Test') {
-        steps{
-          bat("echo %cd%")
-          bat("whoami")
-        }
-      }
       stage('Runing_tests') {
         steps{
           bat("C:\\1PROGRAMS\\Python\\python.exe -m pytest -v")
