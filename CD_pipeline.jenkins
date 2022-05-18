@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Deploying') {
         steps{
-          bat("C:\\Windows\\System32\\cmd.exe scp C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CI_CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
+          bat("C:\\Windows\\System32\\cmd.exe scp C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
         }
       }
   }
