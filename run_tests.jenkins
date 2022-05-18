@@ -1,21 +1,10 @@
 pipeline {
    agent any
    stages {
-      stage('Creating_environment') {
+      stage('Runing_tests') {
         steps{
           bat("C:\\1PROGRAMS\\Python\\python.exe -m pytest -v")
         }
-        }
-
-   stage('Runing_tests') {
-     steps {
-       echo 'Run'
-     }
-   }
-   stage('Result') {
-      steps {
-        bat("C:\\1PROGRAMS\\Python\\python.exe first_test.py")
       }
-   }
   }
 }
