@@ -1,0 +1,10 @@
+pipeline {
+   agent any
+   stages {
+      stage('Runing_tests') {
+        steps{
+          bat("scp Denis_Bulychev@localhost: C:\4COURSES\DQE_Intermidiate\CI_CD\release")
+        }
+      }
+  }
+}
