@@ -1,11 +1,6 @@
 pipeline {
    agent any
    stages {
-      stage('Adding_path') {
-        steps {
-          bat("C:\\1PROGRAMS\\Python\\python.exe -m pip freeze")
-        }
-      }
       stage('Creating_environment') {
         steps{
           bat("C:\\1PROGRAMS\\Python\\python.exe -m pytest -v")
