@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Runing_tests') {
         steps{
-          bat("scp C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_pipeline C:\4COURSES\DQE_Intermidiate\CI_CD\release")
+          bat("scp C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CI_CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
         }
       }
   }
