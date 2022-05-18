@@ -1,9 +1,9 @@
 pipeline {
    agent any
    stages {
-      stage('Runing_tests') {
+      stage('Deploying') {
         steps{
-          bat("scp C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CI_CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
+          bat("C:\\Windows\\System32\\cmd.exe scp C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CI_CD_pipeline C:\\4COURSES\\DQE_Intermidiate\\CI_CD\\release")
         }
       }
   }
