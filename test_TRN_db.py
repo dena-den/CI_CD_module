@@ -7,7 +7,7 @@ import pyodbc
 @pytest.fixture
 def database_connection() -> pyodbc.Cursor:
     """ TRN database connection. """
-    parameters = 'DRIVER={SQL Server};SERVER=EPRUPETW0ECA\SQLEXPRESS;' + \
+    parameters = r'DRIVER={SQL Server};SERVER=EPRUPETW0ECA\SQLEXPRESS;' + \
         'DATABASE=TRN;Trusted_Connection=no;UID=Jenkins;PWD=Belochka666'
     cnxn = pyodbc.connect(parameters)
     return cnxn.cursor()

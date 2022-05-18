@@ -1,7 +1,7 @@
 pipeline {
    agent any
    stages {
-      stage('Testing') {
+      stage('Runing_CI_pipeline') {
         steps{
           build 'CI_pipeline'
         }
